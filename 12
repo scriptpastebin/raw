@@ -1,0 +1,177 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+ 
+local w = library:CreateWindow("Dohm Experience") -- Creates the window
+ 
+local b = w:CreateFolder("Player") -- Creates the folder(U will put here your buttons,etc)
+local c = w:CreateFolder("Jobs") -- Creates the folder(U will put here your buttons,etc)
+local z = w:CreateFolder("Stats") -- Creates the folder(U will put here your buttons,etc)
+local g = w:CreateFolder("Money") -- Creates the folder(U will put here your buttons,etc)
+local l = w:CreateFolder("Teleport Options") -- Creates the folder(U will put here your buttons,etc)
+local h = w:CreateFolder("Exit GUI") -- Creates the folder(U will put here your buttons,etc)
+ 
+ 
+local hasVIP = false
+local touchMoon = false
+ 
+local function vipGiver()
+    if hasVIP == true then
+     game:GetService("Players").LocalPlayer.Inventory.VIP.Value = true
+     print('[DohmBoyOG:] You gave yourself VIP :D')
+elseif hasVIP == false then
+    game:GetService("Players").LocalPlayer.Inventory.VIP.Value = false
+     print('[DohmBoyOG]: You took away your VIP, you madlad :(')
+end
+end
+ 
+b:Toggle("Unlock VIP",function(bool)
+    shared.toggle = bool
+    hasVIP = bool
+    vipGiver()
+end)
+ 
+local function moonGravity()
+    if touchMoon == true then
+        game.Workspace.Gravity = 20
+        print('[DohmBoyOG]: go Fourth and Reach the STARS! :D :D')
+    elseif touchMoon == false then
+        game.Workspace.Gravity = 196.2
+        print('[DohmBoyOG]: Welcome back to earth my friend, we missed you!')
+end
+    end
+ 
+b:Toggle("Moon Gravity",function(bool)
+    shared.toggle = bool
+    touchMoon= bool
+    moonGravity()
+end)
+ 
+c:Button("Search and Rescue",function()
+    game:GetService("ReplicatedStorage")['JobS&R']:FireServer()
+end)
+ 
+c:Button("Guide",function()
+    game:GetService("ReplicatedStorage")['JobGuide']:FireServer()
+end)
+ 
+c:Button("Explorer",function()
+    game:GetService("ReplicatedStorage")['JobExplorer']:FireServer()
+end)
+ 
+z:Button("Refill Health",function()
+    game:GetService("ReplicatedStorage")['JobExplorer']:FireServer()
+end)
+ 
+z:Button("Refill Hydration",function()
+    game:GetService("Players").LocalPlayer.Inventory.Hydration.Value = 100
+end)
+ 
+z:Button("Refill Enegry",function()
+    game:GetService("Players").LocalPlayer.Inventory.Energy.Value = 999
+end)
+ 
+g:Button("Give [Cash]",function()
+    game:GetService("ReplicatedStorage")['Coins_Award']:FireServer('10000')
+end)
+ 
+local names = game.Players:GetPlayers()
+for i = 1, #names do names[i] = names[i].Name end
+ 
+l:Button("Teleport to Players",function()
+    local j = library:CreateWindow("Magic Teleport") -- Creates the window
+    local f = j:CreateFolder("PickaPlayer") -- Creates the folder(U will put here your buttons,etc)
+    f:Dropdown("Dropdown",names,true,function(mob) --true/false, replaces the current title "Dropdown" with the option that t
+    local nm = mob
+    print('here')
+    local plr1 = game.Players.LocalPlayer.Character
+    local plr2 = game.Workspace:FindFirstChild(nm)
+    plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+    print('debug')
+    end)
+end)
+ 
+l:Button("Teleport to Locations",function()
+    local d = library:CreateWindow("Points of Interest") -- Creates the window
+    
+    local l = d:CreateFolder("Camps") -- Creates the folder(U will put here your buttons,etc)
+    local q = d:CreateFolder("Peaks") -- Creates the folder(U will put here your buttons,etc)
+    local x = d:CreateFolder("Team Tents") -- Creates the folder(U will put here your buttons,etc
+    local r = d:CreateFolder("Luxury Tents") -- Creates the folder(U will put here your buttons,etc
+    
+    l:Button("Starting Camp",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Water_Refill_Basecamp"].CFrame * CFrame.new(2,0,20)
+    end)
+    
+    l:Button("Campsite One",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Water_Refill_Camp1"].CFrame * CFrame.new(20,0,20)
+    end)
+    
+    l:Button("Campsite Two",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Water_Refill_Camp2"].CFrame * CFrame.new(10,0,10) 
+    end)
+    
+    l:Button("Campsite Three",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Water_Refill_Camp3"].CFrame * CFrame.new(10,0,10) 
+    end)
+    
+    q:Button("The South Pole",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["South Pole Globe"].CFrame * CFrame.new(10,0,10) 
+    end)
+    
+    x:Button("Kaleum Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_OutfitKaleum"].CFrame * CFrame.new(5,2,20) 
+    end)
+    
+    x:Button("United Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_BackpackUnited"].CFrame * CFrame.new(5,2,-10)
+    end)
+    
+    x:Button("Gopro Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_BackpackGopro"].CFrame * CFrame.new(-2,2,-5) 
+    end)
+    
+    x:Button("World Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_BackpackWorldExpeditions"].CFrame * CFrame.new(-2,2,-5) 
+    end)
+    
+    x:Button("Ghost Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_HelmetGhost"].CFrame * CFrame.new(-2,2,-5)  
+    end)
+    
+    x:Button("VOYD Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_HelmetVOYD"].CFrame * CFrame.new(2,2,-5)  
+    end)
+    
+    x:Button("Alpine Expeditions",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Touch_Basecamp_BackpackAlpine"].CFrame * CFrame.new(2,2,-5)  
+    end)
+    
+    r:Button("Luxury Tent 1",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Fireplace"].CFrame * CFrame.new(-5,5,-10)  
+    end)
+    
+     r:Button("Luxury Tent 2",function()
+    local plr1 = game.Players.LocalPlayer.Character
+    plr1.HumanoidRootPart.CFrame = game.Workspace["Single Bed"]["Simple Pillow"].CFrame * CFrame.new(-4,2,10)  
+    end)
+end)
+ 
+h:DestroyGui()
+h:Label("DohmBoyOG#0313",{
+    TextSize = 15; -- Self Explaining
+    TextColor = Color3.fromRGB(255,74,0); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
