@@ -1,0 +1,211 @@
+local args = {
+  [1] = {
+      ["Missions"] = {},
+      ["PickedGender"] = true,
+      ["Data"] = {
+          ["Stat_Points"] = 9999,
+          ["Bounty"] = 10000,
+          ["Side"] = "Pirate",
+          ["Beli"] = 999999,
+          ["Mastery"] = {
+              ["Demon Art"] = {
+                  [1] = 100,
+                  [2] = 100
+              },
+              ["Defense"] = {
+                  [1] = 100,
+                  [2] = 100
+              },
+              ["Strength"] = {
+                  [1] = 100,
+                  [2] = 100
+              },
+              ["Sword"] = {
+                  [1] = 100,
+                  [2] = 100
+              },
+              ["Breathing Technique"] = {
+                  [1] = 100,
+                  [2] = 100
+              },
+              ["Agility"] = {
+                  [1] = 100,
+                  [2] = 100
+              }
+          },
+          ["Exp"] = {
+              [1] = 0,
+              [2] = 9000
+          }
+      },
+      ["Themes"] = true,
+      ["DataById"] = {},
+      ["Race"] = 4,
+      ["ThemesVolume"] = {
+          [1] = 3,
+          [2] = 10
+      },
+      ["Keys"] = {
+          ["Interact"] = {
+              ["Key"] = "E",
+              ["Toggle"] = false
+          },
+          ["Move5"] = {
+              ["Key"] = "B",
+              ["Toggle"] = false
+          },
+          ["Move4"] = {
+              ["Key"] = "V",
+              ["Toggle"] = false
+          },
+          ["Move6"] = {
+              ["Key"] = "N",
+              ["Toggle"] = false
+          },
+          ["Menu"] = {
+              ["Key"] = "M",
+              ["Toggle"] = false
+          },
+          ["Move1"] = {
+              ["Key"] = "Z",
+              ["Toggle"] = false
+          },
+          ["Run"] = {
+              ["Key"] = "LeftShift",
+              ["Toggle"] = false
+          },
+          ["Move2"] = {
+              ["Key"] = "X",
+              ["Toggle"] = false
+          },
+          ["Move3"] = {
+              ["Key"] = "C",
+              ["Toggle"] = false
+          }
+      },
+      ["New"] = true,
+      ["ScreenShake"] = true,
+      ["KeyBinds"] = {
+          ["Move4"] = "",
+          ["Move6"] = "",
+          ["Move1"] = "",
+          ["Move2"] = "",
+          ["Move5"] = "",
+          ["Move3"] = ""
+      },
+      ["GlobalShadows"] = true,
+      ["KnockNpc"] = true,
+      ["playerspawn"] = "None",
+      ["Quests"] = {},
+      ["RewardSystem"] = {
+          ["RewardDay"] = 1625103249.491,
+          ["LastRewardTick"] = 1625103249.491,
+          ["GotReward"] = 0
+      },
+      ["JailTime"] = 0,
+      ["Ships"] = {},
+      ["HighestId"] = 1,
+      ["LastFinishedQuest"] = {},
+      ["Banned"] = 0,
+      ["UnlockedMoves"] = {},
+      ["Customization"] = {
+          ["FishManColor"] = 1,
+          ["Face"] = 1,
+          ["RaceSpins"] = 99999,
+          ["AccessoryColor2"] = {
+              ["B"] = 1,
+              ["G"] = 1,
+              ["R"] = 1
+          },
+          ["FishPart"] = 1,
+          ["Hair2"] = 0,
+          ["MarineCloths"] = true,
+          ["MinkSecondary"] = 0,
+          ["MarineHat"] = true,
+          ["AccessoryEnabled"] = false,
+          ["HairColor"] = {
+              ["B"] = 0,
+              ["G"] = 0,
+              ["R"] = 0
+          },
+          ["HairColor2"] = {
+              ["B"] = 0,
+              ["G"] = 0,
+              ["R"] = 0
+          },
+          ["MinkPart"] = 1,
+          ["BeardColor"] = {
+              ["B"] = 0,
+              ["G"] = 0,
+              ["R"] = 0
+          },
+          ["AccessoryColor"] = {
+              ["B"] = 1,
+              ["G"] = 1,
+              ["R"] = 1
+          },
+          ["FishSecondary"] = 0,
+          ["Beard"] = 0,
+          ["Hair"] = 0
+      },
+      ["BreathingProgression"] = {
+          [1] = 60,
+          [2] = 60
+      },
+      ["SpawnIsland"] = "TestIsland",
+      ["DemonProgression"] = {
+          [1] = 60,
+          [2] = 60
+      },
+      ["EffectsVolume"] = {
+          [1] = 5,
+          [2] = 10
+      },
+      ["Gender"] = "Male",
+      ["LastDailyReward"] = 0,
+      ["PlacesUnlocked"] = {
+          [1] = 5326145070
+      },
+      ["Inventory"] = {
+          ["Equiped"] = {
+              ["Tools"] = {
+                  [1] = 1
+              },
+              ["Weapons"] = {
+                  ["RightArm"] = "",
+                  ["Head"] = "",
+                  ["LeftArm"] = ""
+              },
+              ["Clothes"] = {
+                  ["Pants"] = "",
+                  ["Hat"] = "",
+                  ["Shirt"] = "",
+                  ["Hat2"] = ""
+              }
+          },
+          ["Items"] = {
+              [1] = {
+                  ["Stats"] = {
+                      ["Defense"] = {
+                          [1] = 100,
+                          [2] = 100
+                      }
+                  },
+                  ["Name"] = "Combat",
+                  ["Id"] = 1,
+                  ["Type"] = "Tool",
+                  ["Rarity"] = "Common"
+              }
+          }
+      },
+      ["ExpTime"] = 999999999,
+      ["Inbox"] = {},
+      ["Material"] = true,
+      ["BountyUpdates"] = true,
+      ["BeliTime"] = 0,
+      ["Power"] = "Thunder Breathing",
+      ["Pvp"] = true
+  }
+}
+
+game:GetService("ReplicatedStorage").ScriptCommunication.Set:FireServer(unpack(args))
