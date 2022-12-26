@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@scriptpastebin 
-scriptpastebin
-/
-raw
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-raw/UI
-@scriptpastebin
-scriptpastebin Create UI
-Latest commit b0c0ec2 1 minute ago
- History
- 1 contributor
-2017 lines (1724 sloc)  74.3 KB
-
 if game.CoreGui:FindFirstChild("Library") then
     game.CoreGui:FindFirstChild("Library"):Destroy()
   end  
@@ -261,21 +231,21 @@ end
    MainTitle.Size = UDim2.new(0, 71, 0, 20)
    MainTitle.Font = Enum.Font.Gotham 
    MainTitle.Text = Title
-   MainTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
-   MainTitle.TextSize = 50.000
+   MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+   MainTitle.TextSize = 25.000
    MainTitle.TextXAlignment = Enum.TextXAlignment.Center
   
   
    GameTitle.Name = "GameTitle"
    GameTitle.Parent = LeftFrame
-   GameTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+   GameTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
    GameTitle.BackgroundTransparency = 1.000
    GameTitle.Position = UDim2.new(0, posMG, 0.089, 6)
    GameTitle.Size = UDim2.new(0, 71, 0, 20)
    GameTitle.Font = Enum.Font.Gotham
    GameTitle.Text = Game
-   GameTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
-   GameTitle.TextSize = 50
+   GameTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+   GameTitle.TextSize = 17.000
    GameTitle.TextTransparency = 0.400
    GameTitle.TextXAlignment = Enum.TextXAlignment.Center
   
@@ -2045,17 +2015,3 @@ end)
   end
 
  return VLib
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
