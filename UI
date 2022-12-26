@@ -243,7 +243,7 @@ end
   
    LeftFrame.Name = "LeftFrame"
    LeftFrame.Parent = MainFrame
-   LeftFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   LeftFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
    LeftFrame.Position = UDim2.new(-0.000674468291, 0, -0.000149806539, 0)
    LeftFrame.Size = UDim2.new(0, 190, 0, 500)
   
@@ -255,13 +255,13 @@ end
   
    MainTitle.Name = "MainTitle"
    MainTitle.Parent = LeftFrame
-   MainTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   MainTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
    MainTitle.BackgroundTransparency = 1.000
    MainTitle.Position = UDim2.new(0, posMG, 0.038, 0)
    MainTitle.Size = UDim2.new(0, 71, 0, 20)
    MainTitle.Font = Enum.Font.Gotham 
    MainTitle.Text = Title
-   MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+   MainTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
    MainTitle.TextSize = 25.000
    MainTitle.TextXAlignment = Enum.TextXAlignment.Center
   
