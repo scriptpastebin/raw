@@ -261,21 +261,21 @@ end
    MainTitle.Size = UDim2.new(0, 71, 0, 20)
    MainTitle.Font = Enum.Font.Gotham 
    MainTitle.Text = Title
-   MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-   MainTitle.TextSize = 25.000
+   MainTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+   MainTitle.TextSize = 50.000
    MainTitle.TextXAlignment = Enum.TextXAlignment.Center
   
   
    GameTitle.Name = "GameTitle"
    GameTitle.Parent = LeftFrame
-   GameTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   GameTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
    GameTitle.BackgroundTransparency = 1.000
    GameTitle.Position = UDim2.new(0, posMG, 0.089, 6)
    GameTitle.Size = UDim2.new(0, 71, 0, 20)
    GameTitle.Font = Enum.Font.Gotham
    GameTitle.Text = Game
-   GameTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-   GameTitle.TextSize = 17.000
+   GameTitle.TextColor3 = Color3.fromRGB(0, 0, 0)
+   GameTitle.TextSize = 50
    GameTitle.TextTransparency = 0.400
    GameTitle.TextXAlignment = Enum.TextXAlignment.Center
   
