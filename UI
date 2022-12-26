@@ -1,3 +1,33 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@scriptpastebin 
+scriptpastebin
+/
+raw
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+raw/UI
+@scriptpastebin
+scriptpastebin Create UI
+Latest commit b0c0ec2 1 minute ago
+ History
+ 1 contributor
+2017 lines (1724 sloc)  74.3 KB
+
 if game.CoreGui:FindFirstChild("Library") then
     game.CoreGui:FindFirstChild("Library"):Destroy()
   end  
@@ -5,7 +35,7 @@ if game.CoreGui:FindFirstChild("Library") then
   local VLib = {
    RainbowColorValue = 0,
    HueSelectionPosition = 0,
-   BackColor = Color3.fromRGB(45,45,45),
+   BackColor = Color3.fromRGB(250,250,250),
    Flags = {}
    }
   local UserInputService = game:GetService("UserInputService")
@@ -2015,3 +2045,17 @@ end)
   end
 
  return VLib
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
