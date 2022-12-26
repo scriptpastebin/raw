@@ -233,7 +233,7 @@ end
   
    MainFrame.Name = "MainFrame"
    MainFrame.Parent = Library
-   MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+   MainFrame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
    MainFrame.Position = UDim2.new(0.5, -325, 0.5, -250)
    MainFrame.Size = UDim2.new(0, 650, 0, 500)
   
@@ -243,7 +243,7 @@ end
   
    LeftFrame.Name = "LeftFrame"
    LeftFrame.Parent = MainFrame
-   LeftFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+   LeftFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
    LeftFrame.Position = UDim2.new(-0.000674468291, 0, -0.000149806539, 0)
    LeftFrame.Size = UDim2.new(0, 190, 0, 500)
   
