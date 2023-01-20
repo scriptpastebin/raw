@@ -106,7 +106,7 @@ if game.CoreGui:FindFirstChild("Library") then
       TweenService:Create(
          object,
          TweenInfo.new(.2, Enum.EasingStyle.Quad),
-         {BackgroundColor3 = Color3.fromRGB(45, 45, 45)}
+         {BackgroundColor3 = Color3.fromRGB(0, 0, 45)}
       ):Play()
   end)
   object.MouseLeave:Connect(function()
