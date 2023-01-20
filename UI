@@ -174,10 +174,6 @@ if not isfolder(FolderName.."/Plugins/") then
   makefolder(FolderName.."/Plugins/")
 end
 
-if not isfile(FolderName.."/configs/".."hewo"..".json") then
-   writefile(FolderName.."/configs/".."hewo"..".json", "")
-end
-
 local Notification = loadstring(game:HttpGet"https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Notification-Transfering")()
 function VLib:Notify(Text)
   Notification:Notify(Text)
@@ -507,13 +503,12 @@ function VLib:ActivateItem(val)
     if table.find(trigger["Run"], ass) then
         a=true
     end
-   -- local content = game:GetService("HttpService"):JSONDecode(readfile(FolderName.."/configs/".."hewo"..".json"))
       if VLib.Flags[Itname] then
          spawn(function()
             VLib.Flags[Itname]:Set(a)
             print(VLib.Flags[Itname].Value)
          end)
-   end
+end
 end
 
 local HChatText = Instance.new("TextLabel")
@@ -768,7 +763,6 @@ end)
             Container.Visible = true
          end
       )
-
       local ContainerItems = {}
       function ContainerItems:Button(text, callback)
          local Buttonfunc = {}
@@ -2014,4 +2008,4 @@ end)
    return Tabs
   end
 
- return VLib
+return VLib
