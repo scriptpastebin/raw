@@ -1,0 +1,48 @@
+local lib = require(game:GetService("ReplicatedStorage").Framework.Library)
+
+if not getgenv().hook then
+    getgenv().hook = true
+    local functions = lib.Network.Fire, lib.Network.Invoke
+    local old 
+    old = hookfunction(getupvalue(functions, 1) , function(...) return true end)
+    
+    local Blunder = require(game:GetService("ReplicatedStorage"):FindFirstChild("BlunderList", true))
+    local OldGet = Blunder.getAndClear
+    
+    setreadonly(Blunder, false)
+    
+    local function OutputData(Message)
+        return Message
+    end
+    
+    Blunder.getAndClear = function(...)
+        local Packet = ...
+        for i,v in next, Packet.list do
+            if v.message ~= "PING" then
+                OutputData(v.message)
+                table.remove(Packet.list, i)
+            end
+        end
+        return OldGet(Packet)
+    end
+end
+
+function CollectYeetOrbs()
+    local PlayerCFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
+    if game:GetService("Workspace").__MAP:WaitForChild("Interactive"):WaitForChild("Orbs") then
+        for i, v in pairs(game:GetService("Workspace").__MAP.Interactive.Orbs:GetChildren()) do
+            v.Orb.CFrame = PlayerCFrame
+        end
+    end
+end
+
+function Yeet()
+    lib.Network.Invoke("Yeet a Pet: Throw")
+end
+
+spawn(function()
+    while task.wait(0.1) do
+        CollectYeetOrbs()
+        Yeet()
+    end
+end)
