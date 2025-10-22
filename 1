@@ -1,1 +1,85 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
+if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
+
+
+_G.RAM = {
+    ["Roblox Account Manager"] = {
+        ["Auto Sending"] = false,
+        ["Blacklist Rod"] = {"Starter Rod","Luck Rod","Ice Rod","Lucky Rod","Midnight Rod"},
+        ["Delay Log"] = 5,
+    },
+}
+
+_G.Logic = {
+    ["Data"] = {
+        ["Ghostfinn Rod"] = {
+            ["Allow Doing"] = true,
+            ["Doing After"] = {
+                ["Level"] = 25, -- // Type ~ [ Requirement Level ]
+                ["Rod"] = "Chrome Rod" -- // Type ~ [ Requirement Rod ]
+            },
+        }, 
+        ["Element Rod"] = { 
+            ["Allow Doing"] = true,
+            ["Doing After"] = {
+                ["Level"] = 50, -- // Type ~ [ Requirement Level ]
+                ["Rod"] = "Ghostfinn Rod" -- // Type ~ [ Requirement Rod ]
+            },
+        }, 
+        ["Main Location"] = { -- // Type ~ [ CFrame ] Kohana Volcano
+            ["Data CFrame"] = CFrame.new(-628.519409, 20.601511, 69.7417526, -0.99799186, 3.05362136e-08, -0.0633425638, 2.74305378e-08, 1, 4.98994943e-08, 0.0633425638, 4.80617679e-08, -0.99799186),
+        },
+    },
+}
+
+ _G.Config = {
+    ["Version"] = "9", 
+    ["Optimize"] = {
+        ["Disabled 3d Render"] = false
+    },
+    ["Selling"] = {
+        ["Delay"] = 10, -- // Type ~ [ Number ] ( Second )
+        ["Auto Sell"] = true,
+    },
+    ["Fishing"] = {
+        ["Smart Calculator Delay"] = true,
+        ["Perfect Cast"] = true,
+    },
+    ["Favorite"] = {
+        ["Allow Doing"] = true,
+        ["Favorite Type"] = {"Mythic", "SECRET"},
+    },
+    ["Doing Quest"] = {
+        ["Auto Ghostfinn Rod"] = true, -- // Read Logic Config
+        ["Aura Boat"] = true, -- // Read Logic Config
+    },
+    ["Web Hook"] = {
+        ["Link Webhook"] = "", -- // Type ~ Link Webhook
+        ["Auto Sending"] = false,
+        ["Delay"] = 30,-- // Type ~ [ Number ] ( Second )
+    },
+    ["Bobber"] = {
+        ["Auto Buying"] = true,
+        ["Auto Equip"] = true,
+        ["Bobber List"] = { -- // Type ~ [ Number ] Bait Data
+            "Midnight Bait",
+            "Chroma Bait",
+            "Corrupt Bait",
+            "Dark Matter Bait",
+        },
+    },
+    ["Rod List"] = { -- // Type ~ Rod Data
+        "Luck Rod",
+        "Ice Rod",
+        "Lucky Rod",
+        "Ice Rod",
+        "Midnight Rod",
+        "Steampunk Rod",
+        "Chrome Rod",
+        "Astral Rod",
+        "Ares Rod",
+        "Angler Rod",
+    },
+}
+
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b5700cc9630eb5aa7d819e843789f071.lua"))()
