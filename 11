@@ -1750,7 +1750,7 @@ function CheckQuest()
 	end;
 end;
 -- ===== vonlib (Redz) UI bootstrap =====
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Andrazx23/Another/refs/heads/main/ui.luau"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/refs/heads/main/UI"))()
 
 local Window = Library:MakeWindow({
 	Title = "Navz Hub",
