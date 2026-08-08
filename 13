@@ -1,56 +1,87 @@
-repeat wait() until game:IsLoaded()
-getgenv().Config = {
+repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Setting = {
     ["Team"] = "Pirates",
-    ["Settings"] = {
-        ["Specator Target"] = false,
-        ["Others"] = {
-            ["Auto Awakening V4"] = true,
-            ["Auto Turn Race V3"] = true,
-        },
-        ["Skip V4 Player"] = true,
-        ["Skip Fruit"] = {"Portal-Portal", "Buddha-Buddha", "Kitsune-Kitsune", "Dragon-Dragon", "Pain-Pain"},
-        ["Low Health"] = {
-            ["Min"] = 4000,
-            ["Max"] = 6000
+    ["Auto Click"] = true,
+    ["Delay Click"] = 0.3,
+    ["EnableWeapon"] = {
+        ["Fruit"] = false,
+        ["Melee"] = true,
+        ["Sword"] = true,
+        ["Gun"] = false
+    },
+    ["Melee"] = {
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.5},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.6},
+        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.5},
+        ["ChangeDelay"] = 3
+    },
+    ["Sword"] = {
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 1.5},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.6},
+        ["ChangeDelay"] = 2
+    },
+    ["Gun"] = {
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["ChangeDelay"] = 1,
+        ["GunMode"] = false
+    },
+    ["Fruit"] = {
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["V"] = {["Enable"] = false, ["HoldTime"] = 0.1},
+        ["F"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["ChangeDelay"] = 1
+    },
+    ["LockBounty"] = {
+        ["Enable"] = false,
+        ["Min"] = 0,
+        ["Max"] = 30000000
+    },
+    ["Skip"] = {
+        ["Fruit"] = true,
+        ["FruitSkip"] = {"Buddha","Tiger","T-Rex"},
+        ["SafeZone"] = true,
+        ["NoHaki"] = true,
+        ["NoPvP"] = true
+    },
+    ["SafeHealth"] = {
+        ["Health"] = 4700,
+        ["Mask"] = false,
+        ["MaskType"] = "Mask",
+        ["RaceV4"] = false
+    },
+    ["Setting"] = {
+        ["UseRaceV3"] = true,
+        ["UseRaceV4"] = true,
+        ["SafeHealth"] = true,
+        ["Skip V4 Race"] = true,
+        ["Health"] = 4700,
+        ["FPSBoots"] = true,
+        ["AutoServerHop"] = true,
+        ["CheckCombatBeforeHop"] = true,
+        ["Fast Attack"] = true
+    },
+    ["Select Region"] = {
+        ["Enabled"] = true,
+        ["Region"] = {
+            ["Singapore"] = true,
+            ["United States"] = false,
+            ["Netherlands"] = false,
+            ["Germany"] = false,
+            ["India"] = false,
+            ["Australia"] = false
         }
     },
-    ["Weapon"] = {
-        ["Melee"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0.1,
-            ["Skills"] = {
-                ["Z"] = {["Enable"] = true, ["Hold"] = 0},
-                ["X"] = {["Enable"] = true, ["Hold"] = 0},
-                ["C"] = {["Enable"] = true, ["Hold"] = 0},
-            }
-        },
-        ["Sword"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0.1,
-            ["Skills"] = {
-                ["Z"] = {["Enable"] = true, ["Hold"] = 0},
-                ["X"] = {["Enable"] = true, ["Hold"] = 0},
-            }
-        },
-        ["Gun"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0.1,
-            ["Skills"] = {
-                ["Z"] = {["Enable"] = true, ["Hold"] = 0},
-                ["X"] = {["Enable"] = true, ["Hold"] = 0},
-            }
-        },
-        ["Blox Fruit"] = {
-            ["Enable"] = true,
-            ["Delay"] = 0.1,
-            ["Skills"] = {
-                ["Z"] = {["Enable"] = true, ["Hold"] = 0},
-                ["X"] = {["Enable"] = true, ["Hold"] = 0},
-                ["C"] = {["Enable"] = true, ["Hold"] = 0},
-                ["V"] = {["Enable"] = false, ["Hold"] = 0},
-                ["F"] = {["Enable"] = true, ["Hold"] = 0},
-            }
-        },
+    ["Webhook"] = {
+        ["Enabled"] = true,
+        ["Url"] = "your Url webhook"
+    },
+    ["AimBot"] = {
+        ["Enable"] = true,
+        ["AimCamera"] = {["Enable"] = true, ["MaxDistance"] = 300},
+        ["LockAim"] = {["Enable"] = true}
     }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WhiteX1208/Scripts/refs/heads/main/Auto-Bounty.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/AutoBounty.lua"))()
