@@ -1,58 +1,116 @@
+repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Team = "Pirates" --// Marines
+getgenv().On_Ui = true
 getgenv().Config = {
-    ["Setting"] = {
-        ["Team"] = "Pirates", -- Pirates/Marines
-        ["FPS Boost"] = false,
-        ["RemoveNotification"] = false,
-        ["Time Skip Player"] = 120 -- Second
+    ["Safe Health"] = {30, 50}, -- {health run, health kill}
+    ["Custom Y Run"] = {
+        Enabled = true,
+        ["Y Run"] = 1000
     },
-    ["Run"] = {
-        ["RunIfLowHealth"] = true,
-        ["HealtRun"] = 30, -- %
-        ["HealthBack"] = 50, -- %
-        ["Teleport Y"] = 400
+    ["Hunt Method"] = {
+        ["Use Move Predict"] = false,
+        ["ESP Player"] = true,
+        ["Skip Player"] = {"nhinemtheothangkhac2"},
+        ["Skip Player High Bounty"] = nil, -- number or {number1, number2, ...} or nil
+        ["Max Attack Time"] = 40,
+        ["Lock Bounty"] = {
+            ["Enabled"] = false,
+            ["Bounty"] = {0, 30000000}
+        }
+    },
+    ["Stats"] = {
+        ["Enable"] = false,
+        ["Reset Stats"] = false,
+        ["Point"] = {
+            ["Points per lift"] = nil,
+            ["Melee"] = nil,
+            ["Defence"] = nil,
+            ["Sword"] = nil,
+            ["Gun"] = nil,
+            ["Devil Fruit"] = nil
+        }
+    },
+    ["Shop"] = {
+        ["Random Fruit"] = false,
+        ["Store Fruit"] = true,
+        ["Zoro Sword"] = false
+    },
+    ["Setting"] = {
+        ["World"] = 3,
+        ["White Screen"] = false,
+        ["Fast Delay"] = 0.45,
+        ["FPS BOOSTER"] = false,
+        ["Url"] = "", -- có thể chỉnh thành {url, true} nếu muốn gửi webhook
+        ["Lock Weapons"] = {
+          ["Melee"] = nil, --// Hên xui vì game đã patched buy melee từ xa
+          ["Sword"] = nil,
+          ["Gun"] = nil
+        },
+        ["Server Hop"] = {
+          ["Region"] = "Singapore",
+          ["Minimum player"] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1} --// Số player tối thiểu để hop sang sv đó
+        }
     },
     ["Skip"] = {
-        ["Skip V4"] = false,
-        ["Skip Fruits"] = {"Portal-Portal", "Buddha-Buddha"}
+        ["Avoid V4"] = false,
+        ["Fruit"] = {
+            ["Enabled"] = true,
+            ["Avoid Fruit"] = {
+                "Portal-Portal",
+                "Kitsune-Kitsune"
+            }
+        }
     },
-    ["Bounty"] = {
-        ["Aimbot Camera"] = true,
-        ["ESP Player"] = true
+    ["Spam All Skill On V4"] = {
+        Enabled = true,
+        ["Weapons"] = {"Melee", "Sword", "Gun", "Blox Fruit"}
     },
-    ["Weapon"] = {
+    ["Combo"] = {
+        Enabled = true,
+        ["Order"] = {
+            {"Gun", {"X","Z"}},
+            {"Sword", {"Z","X"}},
+            {"Melee", {"X","Z","C"}},
+            {"Blox Fruit", {"Z","X","C","V","F"}}
+        }
+    },
+    ["Items"] = {
         ["Melee"] = {
-            ["Use Melee"] = true,
-            ["Z"] = {Enable = true, Hold = 0.1},
-            ["X"] = {Enable = true, Hold = 0.1},
-            ["C"] = {Enable = true, Hold = 0.1}
-        },
-        ["Fruits"] = {
-            ["Use Fruits"] = true,
-            ["Z"] = {Enable = true, Hold = 0.1},
-            ["X"] = {Enable = true, Hold = 0.1},
-            ["C"] = {Enable = true, Hold = 0.1},
-            ["V"] = {Enable = false, Hold = 0.1},
-            ["F"] = {Enable = false, Hold = 0.1}
+            Enable = true,
+            Delay = 0.02,
+            Skills = {
+                Z = {Enable = true, HoldTime = 0.1},
+                X = {Enable = true, HoldTime = 0.2},
+                C = {Enable = true, HoldTime = 0.3}
+            }
         },
         ["Sword"] = {
-            ["Use Sword"] = true,
-            ["Z"] = {Enable = true, Hold = 0.1},
-            ["X"] = {Enable = false, Hold = 0.1}
+            Enable = true,
+            Delay = 0.02,
+            Skills = {
+                Z = {Enable = true, HoldTime = 1},
+                X = {Enable = true, HoldTime = 0}
+            }
         },
         ["Gun"] = {
-            ["Use Gun"] = false,
-            ["Z"] = {Enable = false, Hold = 0.1},
-            ["X"] = {Enable = false, Hold = 0.1}
+            Enable = true,
+            Delay = 0.02,
+            Skills = {
+                Z = {Enable = true, HoldTime = 0.1},
+                X = {Enable = true, HoldTime = 0.1}
+            }
         },
-    },
-    ["Misc"] = {
-        ["Active Race V3"] = true,
-        ["Active Race V4"] = true,
-        ["Random And Store Fruits"] = false
-    },
-    ["Webhook"] = {
-        ["UrlWebhook"] = "",
-        ["Enable"] = false
+        ["Blox Fruit"] = {
+            Enable = true,
+            Delay = 0.3,
+            Skills = {
+                Z = {Enable = true, HoldTime = 0.1},
+                X = {Enable = true, HoldTime = 0.1},
+                C = {Enable = true, HoldTime = 0.15},
+                V = {Enable = true, HoldTime = 0.2},
+                F = {Enable = true, HoldTime = 0.1}
+            }
+        }
     }
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/...../refs/heads/main/FarmBounty.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ozii-Developer/Watermelon-Hub/refs/heads/main/AutoBounty.luau"))()
